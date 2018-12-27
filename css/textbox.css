@@ -1,0 +1,55 @@
+input:focus, input:active {
+  outline: none;
+}
+input[type="text"]{
+  border: none;
+  border-bottom: solid 2px #707070;
+  background: none;
+  color: black;
+  padding: 15px 40px;
+  font-size: 18px;
+  display: inline-block;
+  padding: 8px 16px;
+}
+@media screen and (max-width: 552px) {
+  input[type=text] {
+    width: 93%;
+    padding:6px 16px;
+  }
+}
+.input-group {
+  display: inline-block;
+  position: relative;
+}
+@media screen and (max-width: 552px) {
+  .input-group{
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+.ig-rf{
+  float: right;
+  margin-right: 0;
+}
+@media screen and (max-width: 552px) {
+  .ig-rf{
+    float: inherit;
+  }
+}
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #000000;
+  pointer-events: none;
+  transition: all 0.15s ease-out 0s;
+}
+.input-group input:focus + label,
+.input-group input.has-value + label {
+  top: -7px;
+  left: 0;
+  font-size: 14px;
+}
